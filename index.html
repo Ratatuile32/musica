@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="star-layer star-layer-1"></div>
+        <div class="star-layer star-layer-2"></div>
+        <div class="star-layer star-layer-3"></div>
+    </nav>
+    <div class="container2">
+    <div class="container">
+        <div class="img-container">
+            <img src="imagenes/gato.jpg" alt="">
+        </div>
+        <h2 id="Titulo">Titulo de la canción</h2>
+        <h3 id="Artista">Artista</h3>
+        <audio src="audio/"></audio>
+
+        <div class="progressbar" id="pro-bar">
+            <div class="progress" id="progress"></div>
+            <div class="duracion">
+                <span id="tiempoA">0:00</span>
+                <span id="tiempoD">2:00</span>
+            </div>
+        </div>
+        <div class="controles">
+                <ion-icon name="play-skip-back" id="prev"></ion-icon>
+                <ion-icon name="play" id="play"></ion-icon>            
+                <ion-icon name="play-skip-forward" id="next"></ion-icon>
+        </div>
+    </div>
+    <div class="box">
+    <h3>playlist</h3>
+    <div class="playlist">
+        <ul id="playlist"></ul>
+      </div>
+    </div></div>
+</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

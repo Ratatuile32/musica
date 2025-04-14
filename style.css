@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Aubrey&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Winky Rough", sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #c9ced3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(249deg, #1224e9, #9205d9, #f64f59);
+    background-size: 600% 600%;
+    animation: rainbow 30s ease infinite;
+}
+
+body nav {
+    position: fixed;
+    inset: 50%;
+    z-index: -1;
+}
+
+.star-layer {
+    width: var(--size);
+    height: var(--size);
+    background: #fff;
+    box-shadow: var(--space-layer);
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    opacity: 75%;
+    animation: moveStars var(--duration) linear infinite;
+}
+
+@keyframes moveStars {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 67%;
+    }
+
+    50% {
+        background-position: 100% 34%;
+    }
+
+    100% {
+        background-position: 0 67%;
+    }
+}
+
+.container {
+    height: 450px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+}
+
+.container2 {
+    padding: 0;
+    display: flex;
+    left: 30vw;
+    height: 490px;
+    width: 740px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.container .img-container {
+    width: 270px;
+    height: 270px;
+    position: relative;
+    top: -50px;
+    left: 40px;
+}
+
+.container .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container h2 {
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+}
+
+.container h3 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    margin: 5px 0 0;
+}
+
+.container .progressbar {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px 20px;
+    width: 90%;
+    height: 4px;
+}
+.container .progressbar .progress {
+    background: #242323;
+    border-radius: 5px;
+    width: 0%;
+    height: 100%;
+    transition: width 0.1s linear;
+}
+
+.container .progressbar .duracion {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .controles {
+    display: flex;
+    position: relative;
+    top: -15px;
+    left: 95px;
+    width: 200px;
+
+}
+
+.container .controles ion-icon {
+    font-size: 30px;
+    color: #010101;
+    margin-right: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.playlist {
+    width: auto;
+    height: 90%;
+    align-self: center;
+    text-align: left;
+    z-index: 1;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.playlist::-webkit-scrollbar{
+    width: 8px;
+    background-color: #bfcdff0b;
+    border-radius: 20px;
+  }
+  .playlist::-webkit-scrollbar:window-inactive {
+    display: none;
+  }
+  .playlist::-webkit-scrollbar-thumb  {
+    background-color: rgb(207, 207, 207);
+    border-radius: 6px;
+  }
+.box{
+    width:  370px;
+    height: 490px;
+    margin-left: 15px;
+}
+.box h3{
+    margin-bottom: 0px;
+}
+.playlist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist li {
+    cursor: pointer;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    padding: 5px;
+    border-bottom: 2px solid #000000;
+}
+
+.playlist li:hover {
+    background: #ffffff82;
+}
